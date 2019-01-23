@@ -272,7 +272,7 @@ class ReactImageVideoLightbox extends React.Component {
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
-                style={{
+                style={{...{
                     top: '0px',
                     left: '0px',
                     overflow: 'hidden',
@@ -284,7 +284,7 @@ class ReactImageVideoLightbox extends React.Component {
                     height: '100%',
                     width: '100%',
                     backgroundColor: 'rgba(0,0,0,1)'
-                }}>
+                },...this.props.styles}}>
 
                 {
                     this.props.showResourceCount &&
