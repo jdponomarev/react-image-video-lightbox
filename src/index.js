@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import * as utils from './utils';
 import NavigateBefore from '@material-ui/icons/NavigateBefore';
 import NavigateNext from '@material-ui/icons/NavigateNext'
@@ -314,27 +314,32 @@ class ReactImageVideoLightbox extends React.Component {
                     }}
                     onClick={this.props.onCloseCallback} />
 
-                <NavigateBefore
-                    style={{
-                        position: 'absolute',
-                        left: '0px',
-                        zIndex: 1,
-                        color: '#FFFFFF',
-                        cursor: 'pointer',
-                        fontSize: `${this.state.iconSize}px`
-                    }}
-                    onClick={() => { this.swipeLeft(); }} />
 
-                <NavigateNext
-                    style={{
-                        position: 'absolute',
-                        right: '0px',
-                        zIndex: 1,
-                        color: '#FFFFFF',
-                        cursor: 'pointer',
-                        fontSize: `${this.state.iconSize}px`
-                    }}
-                    onClick={() => { this.swipeRight(); }} />
+		{(resources && resources.length && resources.length > 1)?(
+                	<Fragment>
+			<NavigateBefore
+                	    style={{
+                	        position: 'absolute',
+                	        left: '0px',
+                	        zIndex: 1,
+                	        color: '#FFFFFF',
+                	        cursor: 'pointer',
+                	        fontSize: `${this.state.iconSize}px`
+                	    }}
+                	    onClick={() => { this.swipeLeft(); }} />
+	
+	                <NavigateNext
+        	            style={{
+        	                position: 'absolute',
+        	                right: '0px',
+        	                zIndex: 1,
+        	                color: '#FFFFFF',
+        	                cursor: 'pointer',
+        	                fontSize: `${this.state.iconSize}px`
+        	            }}
+        	            onClick={() => { this.swipeRight(); }} />
+			</Fragment>
+		):null}
 
                 {
                     this.state.loading &&
