@@ -15,7 +15,7 @@ const RESET_ANIMATION_SPEED = 0.08;
 const INITIAL_X = 0;
 const INITIAL_Y = 0;
 const INITIAL_SCALE = 1;
-const MOBILE_ICON_SIZE = 150;
+const MOBILE_ICON_SIZE = 60;
 const DESKTOP_ICON_SIZE = 150;
 
 class ReactImageVideoLightbox extends React.Component {
