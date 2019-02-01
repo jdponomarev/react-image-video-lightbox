@@ -16,7 +16,7 @@ const INITIAL_X = 0;
 const INITIAL_Y = 0;
 const INITIAL_SCALE = 1;
 const MOBILE_ICON_SIZE = 35;
-const DESKTOP_ICON_SIZE = 50;
+const DESKTOP_ICON_SIZE = 150;
 
 class ReactImageVideoLightbox extends React.Component {
 
@@ -283,7 +283,7 @@ class ReactImageVideoLightbox extends React.Component {
                     flexDirection: 'row',
                     height: '100%',
                     width: '100%',
-                    backgroundColor: 'rgba(0,0,0,1)',
+                    backgroundColor: window.innerWidth <= 500 ? 'rgba(0,0,0,1)' : 'rgba(0,0,0,0.5)',
                     zIndex:9999
                 },...this.props.styles}}>
 
