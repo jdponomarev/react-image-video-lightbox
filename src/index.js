@@ -272,7 +272,11 @@ class ReactImageVideoLightbox extends React.Component {
                 onTouchStart={this.handleTouchStart}
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
-                style={{...{
+                onClick={()=>{
+			console.log("close")
+			this.props.onCloseCallback();
+		}}
+		style={{...{
                     top: '0px',
                     left: '0px',
                     overflow: 'hidden',
