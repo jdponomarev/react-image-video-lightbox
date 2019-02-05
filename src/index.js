@@ -16,7 +16,7 @@ const INITIAL_X = 0;
 const INITIAL_Y = 0;
 const INITIAL_SCALE = 1;
 const MOBILE_ICON_SIZE = 60;
-const DESKTOP_ICON_SIZE = 100;
+const DESKTOP_ICON_SIZE = 120;
 
 
 
