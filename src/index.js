@@ -16,7 +16,9 @@ const INITIAL_X = 0;
 const INITIAL_Y = 0;
 const INITIAL_SCALE = 1;
 const MOBILE_ICON_SIZE = 60;
-const DESKTOP_ICON_SIZE = 150;
+const DESKTOP_ICON_SIZE = 100;
+
+
 
 class ReactImageVideoLightbox extends React.Component {
 
@@ -273,10 +275,9 @@ class ReactImageVideoLightbox extends React.Component {
                 onTouchMove={this.handleTouchMove}
                 onTouchEnd={this.handleTouchEnd}
                 onClick={()=>{
-			console.log("close")
-			this.props.onCloseCallback();
-		}}
-		style={{...{
+			        this.props.onCloseCallback();
+		        }}
+		        style={{...{
                     top: '0px',
                     left: '0px',
                     overflow: 'hidden',
@@ -307,10 +308,20 @@ class ReactImageVideoLightbox extends React.Component {
                 }
 
                 <Close
-                    style={{
+                    style={(window.innerWidth <= 500)?{
                         position: 'absolute',
                         top: '0px',
                         right: '0px',
+                        padding: '10px',
+                        color: '#FFFFFF',
+                        cursor: 'pointer',
+                        fontSize: `${this.state.iconSize * 0.8}px`
+                    }:{
+                        position: 'absolute',
+                        top: '50%',
+                        right: '50%',
+                        marginTop:"-258px",
+                        marginRight:"-378px",
                         padding: '10px',
                         color: '#FFFFFF',
                         cursor: 'pointer',
